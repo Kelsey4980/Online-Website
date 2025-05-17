@@ -1,1 +1,77 @@
 @import "tailwindcss";
+
+body {
+    background-color: var(--color-tinted-neutral-900);
+    font-family: "Inter";
+}
+@theme {
+    --color-primary-50: #edb8ff;
+    --color-primary-100: #e8a3ff;
+    --color-primary-200: #de7aff;
+    --color-primary-300: #d352ff;
+    --color-primary-400: #c929ff;
+    --color-primary-500: #bf00ff;
+    --color-primary-600: #a000d6;
+    --color-primary-700: #8200ad;
+    --color-primary-800: #630085;
+    --color-primary-900: #45005c;
+
+    --color-secondary-50: #b8ffed;
+    --color-secondary-100: #a3ffe8;
+    --color-secondary-200: #7affde;
+    --color-secondary-300: #52ffd3;
+    --color-secondary-400: #29ffc9;
+    --color-secondary-500: #00ffbf;
+    --color-secondary-600: #00d6a0;
+    --color-secondary-700: #00ad82;
+    --color-secondary-800: #008563;
+    --color-secondary-900: #005c45;
+
+    --color-accent-50: #efcada;
+    --color-accent-100: #eabbcf;
+    --color-accent-200: #e19cba;
+    --color-accent-300: #d87ea5;
+    --color-accent-400: #ce5f90;
+    --color-accent-500: #c5417b;
+    --color-accent-600: #a53767;
+    --color-accent-700: #862c54;
+    --color-accent-800: #662240;
+    --color-accent-900: #47172c;
+
+    --color-tinted-neutral-50: #f5f4f6;
+    --color-tinted-neutral-100: #e3e2e5;
+    --color-tinted-neutral-200: #cac9cd;
+    --color-tinted-neutral-300: #b1b0b5;
+    --color-tinted-neutral-400: #98969d;
+    --color-tinted-neutral-500: #7f7c85;
+    --color-tinted-neutral-600: #65626b;
+    --color-tinted-neutral-700: #4b4851;
+    --color-tinted-neutral-800: #312e37;
+    --color-tinted-neutral-900: #0a040c;
+}
+
+@layer components {
+    .header-default {
+        @apply text-primary-500 flex-center h-[80px] w-full gap-[140px] text-base font-semibold;
+    }
+
+    .header-item {
+        @apply flex items-center justify-center;
+    }
+
+    .gradient-divider-top {
+        @apply from-tinted-neutral-900 to-tinted-neutral-800 top-[800px] h-[72px] w-full bg-linear-to-b from-0% to-100%;
+    }
+
+    .gradient-divider-bottom {
+        @apply from-tinted-neutral-900 to-tinted-neutral-800 top-[800px] h-[72px] w-full bg-linear-to-t from-0% to-100%;
+    }
+
+    .footer {
+        @apply flex-center h-[124px] w-full flex-col gap-5 pt-4 pb-4;
+    }
+}
+
+@utility flex-center {
+    @apply flex items-center justify-center;
+}
