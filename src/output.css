@@ -21,6 +21,7 @@
     --color-primary-500: #bf00ff;
     --color-secondary-500: #00ffbf;
     --color-tinted-neutral-50: #f5f4f6;
+    --color-tinted-neutral-100: #e3e2e5;
     --color-tinted-neutral-800: #312e37;
     --color-tinted-neutral-900: #0a040c;
   }
@@ -176,20 +177,11 @@
     align-items: center;
     justify-content: center;
   }
-  .table {
-    display: table;
-  }
   .h-auto {
     height: auto;
   }
   .h-full {
     height: 100%;
-  }
-  .max-h-\[400px\] {
-    max-height: 400px;
-  }
-  .w-auto {
-    width: auto;
   }
   .w-full {
     width: 100%;
@@ -197,30 +189,23 @@
   .max-w-\[670px\] {
     max-width: 670px;
   }
-  .max-w-\[675px\] {
-    max-width: 675px;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
-  }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
+  .gap-\[180px\] {
+    gap: 180px;
   }
   .bg-tinted-neutral-800 {
     background-color: var(--color-tinted-neutral-800);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
   }
   .text-justify {
     text-align: justify;
@@ -258,13 +243,6 @@
   }
   .text-tinted-neutral-900 {
     color: var(--color-tinted-neutral-900);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
 }
 body {
@@ -322,6 +300,41 @@ body {
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     --tw-gradient-to-position: 100%;
   }
+  .card-work-left {
+    margin-right: 456px;
+    display: flex;
+    height: 400px;
+    max-height: 400px;
+    width: 675px;
+    max-width: 675px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: var(--color-tinted-neutral-100);
+    padding-bottom: calc(var(--spacing) * 10);
+    padding-left: calc(var(--spacing) * 10);
+  }
+  .card-work-right {
+    margin-left: 456px;
+    display: flex;
+    height: 400px;
+    max-height: 400px;
+    width: 675px;
+    max-width: 675px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: var(--color-tinted-neutral-100);
+    padding-bottom: calc(var(--spacing) * 10);
+    padding-left: calc(var(--spacing) * 10);
+  }
+  .card-work-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 1);
+  }
   .footer {
     display: flex;
     align-items: center;
@@ -334,19 +347,9 @@ body {
     padding-bottom: calc(var(--spacing) * 4);
   }
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -393,9 +396,7 @@ body {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
