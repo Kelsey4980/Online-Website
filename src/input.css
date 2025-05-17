@@ -55,6 +55,10 @@ body {
         @apply text-primary-500 flex-center h-[80px] w-full gap-[140px] text-base font-semibold;
     }
 
+    .header-back {
+        @apply text-primary-500 flex h-[80px] w-full items-center justify-start gap-1 pl-10 text-base font-semibold;
+    }
+
     .header-item {
         @apply flex-center;
     }

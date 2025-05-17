@@ -172,10 +172,16 @@
   }
 }
 @layer utilities {
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
   .flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .table {
+    display: table;
   }
   .h-auto {
     height: auto;
@@ -183,11 +189,20 @@
   .h-full {
     height: 100%;
   }
+  .h-screen {
+    height: 100vh;
+  }
   .w-full {
     width: 100%;
   }
   .max-w-\[670px\] {
     max-width: 670px;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -197,6 +212,10 @@
   }
   .gap-\[180px\] {
     gap: 180px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-tinted-neutral-800 {
     background-color: var(--color-tinted-neutral-800);
@@ -244,6 +263,13 @@
   .text-tinted-neutral-900 {
     color: var(--color-tinted-neutral-900);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
 }
 body {
   background-color: var(--color-tinted-neutral-900);
@@ -257,6 +283,20 @@ body {
     height: 80px;
     width: 100%;
     gap: 140px;
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary-500);
+  }
+  .header-back {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: calc(var(--spacing) * 1);
+    padding-left: calc(var(--spacing) * 10);
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
     --tw-font-weight: var(--font-weight-semibold);
@@ -347,9 +387,19 @@ body {
     padding-bottom: calc(var(--spacing) * 4);
   }
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-gradient-position {
   syntax: "*";
@@ -396,7 +446,9 @@ body {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
