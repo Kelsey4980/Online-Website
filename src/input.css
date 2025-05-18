@@ -71,6 +71,42 @@ body {
         @apply from-tinted-neutral-900 to-tinted-neutral-800 top-[800px] h-[72px] w-full bg-linear-to-t from-0% to-100%;
     }
 
+    .card-work-container {
+        @apply flex-center bg-tinted-neutral-900 hover:bg-accent-500 h-auto w-full pt-5 pb-5 transition duration-300 ease-in;
+    }
+
+    .card-work-container-flex-left {
+        @apply flex size-auto transition duration-100 ease-in group-hover:-translate-x-120 group-hover:-skew-x-20;
+    }
+
+    .card-work-container-flex-right {
+        @apply flex size-auto transition duration-100 ease-in group-hover:translate-x-120 group-hover:-skew-x-20;
+    }
+
+    .card-work-container-size {
+        @apply h-[480px] max-h-[480px] w-[755px] max-w-[755px];
+    }
+
+    .card-work-design-top {
+        @apply bg-tinted-neutral-50 absolute z-10 hidden h-[400px] max-h-[400px] w-[675px] max-w-[675px] group-hover:block;
+    }
+
+    .card-work-main {
+        @apply group-hover:flex-center absolute z-30 translate-x-10 translate-y-[40px] flex-col gap-16 border group-hover:pr-16;
+    }
+
+    .card-work-text-hover {
+        @apply group-hover:flex-center group-hover:skew-x-20;
+    }
+
+    .card-work-text-desc {
+        @apply text-tinted-neutral-900 hidden max-w-[400px] text-justify opacity-0 transition-discrete group-hover:block group-hover:skew-x-20 group-hover:opacity-100;
+    }
+
+    .card-work-design-bottom {
+        @apply bg-tinted-neutral-900 absolute z-10 hidden h-[400px] max-h-[400px] w-[675px] max-w-[675px] translate-x-20 translate-y-20 group-hover:block;
+    }
+
     .card-work-left {
         @apply bg-tinted-neutral-100 flex h-[400px] max-h-[400px] w-[675px] max-w-[675px] items-start justify-end pb-10 pl-10;
     }
