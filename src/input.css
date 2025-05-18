@@ -72,7 +72,7 @@ body {
     }
 
     .card-work-left {
-        @apply bg-tinted-neutral-100 mr-[456px] flex h-[400px] max-h-[400px] w-[675px] max-w-[675px] items-end justify-start pb-10 pl-10;
+        @apply bg-tinted-neutral-100 flex h-[400px] max-h-[400px] w-[675px] max-w-[675px] items-start justify-end pb-10 pl-10;
     }
 
     .card-work-right {
