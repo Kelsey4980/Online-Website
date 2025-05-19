@@ -56,7 +56,7 @@ body {
     }
 
     .header-back {
-        @apply text-primary-500 flex h-[80px] w-full items-center justify-start gap-1 pl-10 text-base font-semibold;
+        @apply text-tinted-neutral-50 flex h-[80px] w-full items-center justify-start gap-1 pl-10 text-base font-semibold;
     }
 
     .header-item {
@@ -132,7 +132,11 @@ body {
     }
 
     .footer {
-        @apply flex-center h-[124px] w-full flex-col gap-5 pt-4 pb-4;
+        @apply flex-center mt-40 mb-0 h-[124px] w-full flex-col gap-5 pt-4 pb-4;
+    }
+
+    .footer-icon {
+        @apply text-primary-500 hover:text-tinted-neutral-50 cursor-pointer text-4xl transition duration-200 ease-in-out hover:text-5xl;
     }
 }
 

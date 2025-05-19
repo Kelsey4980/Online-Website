@@ -3,12 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/b097128d6e.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="./output.css" />
         <title>Kelsey - Selected Work</title>
     </head>
     <body>
+        <!--TODO: Make content dynamic -->
         <div class="header-back absolute z-10">
-            <a href="works.html" class="header-item">Back</a>
+            <a href="works.html" class="group flex-center gap-2"
+                ><i
+                    class="fa-solid fa-arrow-left group-hover:text-secondary-500 transition duration-300 ease-in-out"
+                ></i>
+                <p
+                    class="group-hover:text-secondary-500 transition duration-300 ease-in-out"
+                >
+                    Back
+                </p>
+            </a>
         </div>
         <div
             class="flex-center bg-tinted-neutral-800 -top-20 z-0 h-[calc(100vh-80px)] w-full flex-col"
@@ -24,14 +38,24 @@
                 </h4>
             </div>
             <div class="flex h-20 w-full items-end justify-end pr-10 pb-5">
-                <div class="size-auto gap-5">
-                    <!-- TODO: Insert Github link -->
-                    <a class="size-auto gap-1" href="">
+                <div class="flex-center size-auto gap-5">
+                    <a href="https://github.com/Kelsey4980"
+                        ><i
+                            class="fa-brands fa-github footer-icon text-tinted-neutral-50 hover:text-secondary-500 transition duration-300 ease-in-out hover:text-4xl"
+                        ></i
+                    ></a>
+                    <div
+                        class="border-tinted-neutral-50 h-[40px] w-2 border-r border-solid"
+                    ></div>
+                    <a class="group flex-center size-auto gap-3" href="">
                         <p
-                            class="text-tinted-neutral-50 text-2xl font-semibold"
+                            class="text-tinted-neutral-50 group-hover:text-secondary-500 text-2xl font-semibold transition duration-300 ease-in-out"
                         >
                             View
                         </p>
+                        <i
+                            class="fa-solid fa-arrow-right text-tinted-neutral-50 group-hover:text-secondary-500 text-2xl transition duration-300 ease-in-out"
+                        ></i>
                     </a>
                 </div>
             </div>
@@ -84,7 +108,20 @@
             </div>
         </div>
         <div class="footer">
-            <div class="flex-center h-full w-full gap-10"></div>
+            <div class="flex-center h-full w-full gap-10">
+                <a href="https://github.com/Kelsey4980"
+                    ><i class="fa-brands fa-github footer-icon"></i
+                ></a>
+                <a href="mailto:gabriellemkelsey@gmail.com"
+                    ><i class="fa-solid fa-envelope footer-icon"></i
+                ></a>
+                <a href="www.linkedin.com/in/gabrielle-kelsey-88796431b"
+                    ><i class="fa-brands fa-linkedin footer-icon"></i
+                ></a>
+                <a href="https://www.facebook.com/Kelsey.gabrielle.90/"
+                    ><i class="fa-brands fa-facebook footer-icon"></i
+                ></a>
+            </div>
             <p class="text-tinted-neutral-50 text-[1rem]">
                 © KELSEY, GM - I do stuff sometimes.
             </p>
