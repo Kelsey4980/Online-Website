@@ -7,11 +7,13 @@
         <title>Kelsey - Selected Work</title>
     </head>
     <body>
-        <div class="header-back">
+        <div class="header-back absolute z-10">
             <a href="works.html" class="header-item">Back</a>
         </div>
-        <div class="flex-center bg-tinted-neutral-800 h-screen w-full flex-col">
-            <div class="flex-center flex-col gap-5">
+        <div
+            class="flex-center bg-tinted-neutral-800 -top-20 z-0 h-[calc(100vh-80px)] w-full flex-col"
+        >
+            <div class="flex-center h-full flex-col gap-5">
                 <h1
                     class="text-tinted-neutral-50 size-auto text-[4rem] font-semibold"
                 >
@@ -21,19 +23,20 @@
                     Short Description
                 </h4>
             </div>
-            <div class="flex h-auto w-full items-end justify-end pr-10 pb-5">
+            <div class="flex h-20 w-full items-end justify-end pr-10 pb-5">
                 <div class="size-auto gap-5">
-                    <div class="size-auto gap-1">
+                    <!-- TODO: Insert Github link -->
+                    <a class="size-auto gap-1" href="">
                         <p
                             class="text-tinted-neutral-50 text-2xl font-semibold"
                         >
                             View
                         </p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="flex-center flex-col pt-24">
+        <div class="flex-center flex-col gap-60 pt-24">
             <div class="flex-center h-auto max-w-[670px] flex-col gap-10">
                 <h6 class="text-secondary-500 text-2xl font-semibold italic">
                     SPECIFICATIONS
@@ -49,7 +52,7 @@
                     deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div class="flex-center gap-56">
+            <div class="flex-center size-full gap-56">
                 <div class="flex-center h-auto max-w-[670px] flex-col gap-10">
                     <h6
                         class="text-secondary-500 text-2xl font-semibold italic"
@@ -70,12 +73,12 @@
                         anim id est laborum.
                     </p>
                 </div>
-                <div class="size-auto">
+                <div class="flex h-[316px] w-[480px]">
                     <div
-                        class="bg-tinted-neutral-50 h-[260px] max-h-[260px] w-[440px] max-w-[440px]"
+                        class="bg-tinted-neutral-50 absolute z-10 h-[260px] max-h-[260px] w-[440px] max-w-[440px]"
                     ></div>
                     <div
-                        class="bg-tinted-neutral-200 h-[260px] max-h-[260px] w-[440px] max-w-[440px]"
+                        class="bg-tinted-neutral-200 absolute z-0 h-[260px] max-h-[260px] w-[440px] max-w-[440px] translate-x-10 translate-y-14"
                     ></div>
                 </div>
             </div>
