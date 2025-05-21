@@ -12,6 +12,8 @@
     </head>
     <body>
         <!--TODO: Complete images -->
+        <!--TODO: Add specs and contribution -->
+        <!--TODO: Add links to docs -->
         <div class="header-back absolute z-10">
             <a href="research.html" class="group flex-center gap-2"
                 ><i
@@ -43,7 +45,11 @@
             </div>
             <div class="projects-end flex h-20 w-full justify-end pr-10 pb-5">
                 <div class="flex-center size-auto gap-5">
-                    <a class="group flex-center size-auto gap-3" href="">
+                    <a
+                        class="group flex-center size-auto gap-3"
+                        href=""
+                        id="research-link"
+                    >
                         <p
                             class="text-tinted-neutral-50 group-hover:text-secondary-500 text-2xl font-semibold transition duration-300 ease-in-out"
                         >
@@ -136,6 +142,7 @@
             const contributions = document.getElementById(
                 "project-contributions",
             );
+            const link = document.getElementById("research-link");
 
             // Example data mapping
             const content = {
@@ -144,30 +151,35 @@
                     description: " ",
                     specs: "The Utilization of Artificial Intelligence for Finding Specified Locations Through the Implementation of Pathfinding Algorithms.",
                     contributions: "<contributions>",
+                    link: "https://docs.google.com/document/d/1MzMzNY2BpIAtkfhT_onyiC-1hiz6NgEcOmhuq_BKrAk/edit?tab=t.0",
                 },
                 MetabolismAndEnergy: {
                     title: "Metabolism and Energy",
                     description: " ",
                     specs: "The Association between Basal Metabolic Rate on Energy Expenditure and Food Consumption among Grade 12 Students.",
                     contributions: "<contributions>",
+                    link: "https://docs.google.com/document/d/1-Ore-J0fa8FmWmLiPeu18_Eg38J9IO7_0u0WnPCMs5U/edit?tab=t.0",
                 },
                 StressOnSleep: {
                     title: "Stress on Sleep",
                     description: " ",
                     specs: "Assessing the Impact of Stress and Physical Activity on Sleep Quality",
                     contributions: "<contributions>",
+                    link: "https://docs.google.com/document/d/1VBm_VUxXOQdgqWkbPNuqH2kW2fWOQJ2jzmSEeCotpdU/edit?tab=t.0",
                 },
                 CaseStudyMalaysia: {
                     title: "Case Study: Malaysia",
                     description: " ",
                     specs: "The Identification of Key Issues in Malaysia and the Effectiveness of ASEAN's Actions in Response.",
                     contributions: "<contributions>",
+                    link: "https://docs.google.com/document/d/1CX5LwmPYPtAe6TvUDNleDDXKFwGuJnWZ5HbAuRBJk8Y/edit?tab=t.0",
                 },
                 Lasalitaan: {
                     title: "Lasalitaan",
                     description: " ",
                     specs: "Ang Pagpalit ng Lumang Disenyo ng Jeepney ng mas Malinis at Ligtas na Modelo.",
                     contributions: "<contributions>",
+                    link: "https://docs.google.com/document/d/1wtSKuOCFcDBr-0jFr8D62n9m20EXC6BKRXE2lEyhfew/edit?tab=t.0",
                 },
             };
 
@@ -176,13 +188,14 @@
                 description.textContent = content[project].description;
                 specs.textContent = content[project].specs;
                 contributions.textContent = content[project].contributions;
-                console.log("in");
+                link.href = content[project].link;
             } else {
                 title.textContent = "Research Not Found";
                 description.textContent =
                     "Please go back and select a valid research.";
                 specs.textContent = " ";
                 contributions.textContent = " ";
+                link.href = " ";
             }
         </script>
     </body>
