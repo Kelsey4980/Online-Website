@@ -31,6 +31,7 @@
     --color-tinted-neutral-50: #f5f4f6;
     --color-tinted-neutral-100: #e3e2e5;
     --color-tinted-neutral-200: #cac9cd;
+    --color-tinted-neutral-600: #65626b;
     --color-tinted-neutral-800: #312e37;
     --color-tinted-neutral-900: #0a040c;
   }
@@ -407,6 +408,9 @@
   .text-tinted-neutral-50 {
     color: var(--color-tinted-neutral-50);
   }
+  .text-tinted-neutral-600 {
+    color: var(--color-tinted-neutral-600);
+  }
   .text-tinted-neutral-900 {
     color: var(--color-tinted-neutral-900);
   }
@@ -774,8 +778,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     background-color: var(--color-tinted-neutral-200);
-    padding-top: calc(var(--spacing) * 10);
-    padding-left: calc(var(--spacing) * 10);
+    padding: calc(var(--spacing) * 10);
   }
   .card-research-text {
     display: flex;
@@ -784,7 +787,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: calc(var(--spacing) * 1);
+    gap: calc(var(--spacing) * 10);
   }
   .footer {
     margin-top: calc(var(--spacing) * 40);
