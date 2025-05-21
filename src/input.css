@@ -112,15 +112,15 @@ body {
     }
 
     .card-work-right {
-        @apply bg-tinted-neutral-100 ml-[456px] flex h-[400px] max-h-[400px] w-[675px] max-w-[675px] items-end justify-end pr-10 pb-10;
+        @apply bg-tinted-neutral-100 flex h-[400px] max-h-[400px] w-[675px] max-w-[675px] items-end justify-end pr-10 pb-10 group-hover:pr-0;
     }
 
     .card-work-text-left {
-        @apply flex h-auto w-auto flex-col items-start justify-start gap-1;
+        @apply flex h-auto w-auto flex-col items-start justify-start gap-2.5;
     }
 
     .card-work-text-right {
-        @apply flex h-auto w-auto flex-col items-end justify-start gap-1;
+        @apply flex h-auto w-auto flex-col items-end justify-end gap-2.5;
     }
 
     .card-research {
