@@ -143,3 +143,25 @@ body {
 @utility flex-center {
     @apply flex items-center justify-center;
 }
+
+@layer utilities {
+    @keyframes animateGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .animate-gradient {
+        animation: animateGradient 6s ease infinite alternate;
+    }
+
+    .bg-300\% {
+        background-size: 300%;
+    }
+}
