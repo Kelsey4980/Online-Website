@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --spacing: 0.25rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
@@ -31,7 +32,9 @@
     --color-tinted-neutral-50: #f5f4f6;
     --color-tinted-neutral-100: #e3e2e5;
     --color-tinted-neutral-200: #cac9cd;
+    --color-tinted-neutral-500: #7f7c85;
     --color-tinted-neutral-600: #65626b;
+    --color-tinted-neutral-700: #4b4851;
     --color-tinted-neutral-800: #312e37;
     --color-tinted-neutral-900: #0a040c;
   }
@@ -182,11 +185,23 @@
   }
 }
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
   .absolute {
     position: absolute;
   }
+  .relative {
+    position: relative;
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
   .-top-20 {
     top: calc(var(--spacing) * -20);
+  }
+  .-z-30 {
+    z-index: calc(30 * -1);
   }
   .z-0 {
     z-index: 0;
@@ -204,6 +219,9 @@
   }
   .hidden {
     display: none;
+  }
+  .table {
+    display: table;
   }
   .size-auto {
     width: auto;
@@ -230,6 +248,12 @@
   }
   .h-\[720px\] {
     height: 720px;
+  }
+  .h-\[calc\(\)\] {
+    height: calc();
+  }
+  .h-\[calc\(100vh-\)\] {
+    height: calc(100vh - );
   }
   .h-\[calc\(100vh-80px\)\] {
     height: calc(100vh - 80px);
@@ -282,6 +306,9 @@
   .max-w-\[720px\] {
     max-width: 720px;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .translate-x-10 {
     --tw-translate-x: calc(var(--spacing) * 10);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -290,8 +317,17 @@
     --tw-translate-y: calc(var(--spacing) * 14);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .scale-125 {
+    --tw-scale-x: 125%;
+    --tw-scale-y: 125%;
+    --tw-scale-z: 125%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -320,6 +356,14 @@
   .gap-60 {
     gap: calc(var(--spacing) * 60);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-8 {
+    border-style: var(--tw-border-style);
+    border-width: 8px;
+  }
   .border-r {
     border-right-style: var(--tw-border-style);
     border-right-width: 1px;
@@ -331,17 +375,83 @@
   .border-tinted-neutral-50 {
     border-color: var(--color-tinted-neutral-50);
   }
+  .bg-\[url\] {
+    background-color: url;
+  }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
+  }
   .bg-tinted-neutral-50 {
     background-color: var(--color-tinted-neutral-50);
   }
   .bg-tinted-neutral-200 {
     background-color: var(--color-tinted-neutral-200);
   }
+  .bg-tinted-neutral-500 {
+    background-color: var(--color-tinted-neutral-500);
+  }
+  .bg-tinted-neutral-700 {
+    background-color: var(--color-tinted-neutral-700);
+  }
   .bg-tinted-neutral-800 {
     background-color: var(--color-tinted-neutral-800);
   }
   .bg-tinted-neutral-900 {
     background-color: var(--color-tinted-neutral-900);
+  }
+  .bg-\[url\(\"\$\{content\[project\]\.img\}\"\)\] {
+    background-image: url("${content[project].img}");
+  }
+  .bg-\[url\(\'\'\)\] {
+    background-image: url('');
+  }
+  .bg-\[url\(\'\.\.\'\)\] {
+    background-image: url('..');
+  }
+  .bg-\[url\(\'\.\.\/public\/\'\)\] {
+    background-image: url('../public/');
+  }
+  .bg-\[url\(\'\.\.\/public\/connectify5\.png\'\)\] {
+    background-image: url('../public/connectify5.png');
+  }
+  .bg-\[url\(\'\.\.\/public\/connectify10\.png\'\)\] {
+    background-image: url('../public/connectify10.png');
+  }
+  .bg-\[url\(\'\.\.public\/connectify\'\)\] {
+    background-image: url('..public/connectify');
+  }
+  .bg-\[url\(\'\.\.public\/connectify5\'\)\] {
+    background-image: url('..public/connectify5');
+  }
+  .bg-\[url\(\'\.\.public\/connectify5\.png\'\)\] {
+    background-image: url('..public/connectify5.png');
+  }
+  .bg-\[url\(\'content\[project\]\'\)\] {
+    background-image: url('content[project]');
+  }
+  .bg-\[url\(\'content\[project\]\.img\'\)\] {
+    background-image: url('content[project].img');
+  }
+  .bg-\[url\(\)\] {
+    background-image: url();
+  }
+  .bg-\[url\(\`content\[project\]\.img\`\)\] {
+    background-image: url(`content[project].img`);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .bg-top {
+    background-position: top;
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .object-top {
+    object-position: top;
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
@@ -417,6 +527,28 @@
   .italic {
     font-style: italic;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .opacity-0 {
+    opacity: 0%;
+  }
+  .opacity-5 {
+    opacity: 5%;
+  }
+  .opacity-10 {
+    opacity: 10%;
+  }
+  .opacity-30 {
+    opacity: 30%;
+  }
+  .opacity-50 {
+    opacity: 50%;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -450,6 +582,13 @@
       }
     }
   }
+  .group-hover\:bg-\[\.\.\/\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: ../;
+      }
+    }
+  }
   .group-hover\:bg-amber-50 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -457,10 +596,59 @@
       }
     }
   }
+  .group-hover\:bg-\[url\(\'\'\)\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-image: url('');
+      }
+    }
+  }
+  .group-hover\:bg-\[url\(\'\.\.\/public\'\)\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-image: url('../public');
+      }
+    }
+  }
+  .group-hover\:bg-\[url\(\'\.\.\/public\/\'\)\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-image: url('../public/');
+      }
+    }
+  }
+  .group-hover\:bg-\[url\(\'\.\.\/public\/connectify\'\)\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-image: url('../public/connectify');
+      }
+    }
+  }
+  .group-hover\:bg-\[url\(\'\.\.\/public\/connectify5\.png\'\)\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-image: url('../public/connectify5.png');
+      }
+    }
+  }
+  .group-hover\:bg-\[url\(\)\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-image: url();
+      }
+    }
+  }
   .group-hover\:text-secondary-500 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         color: var(--color-secondary-500);
+      }
+    }
+  }
+  .group-hover\:opacity-10 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        opacity: 10%;
       }
     }
   }
@@ -842,6 +1030,21 @@ body {
   inherits: false;
   initial-value: 0;
 }
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -870,6 +1073,11 @@ body {
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -927,6 +1135,9 @@ body {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
@@ -934,6 +1145,7 @@ body {
       --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-gradient-position: initial;
