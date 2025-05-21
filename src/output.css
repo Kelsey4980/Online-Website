@@ -295,9 +295,6 @@
   .flex-col {
     flex-direction: column;
   }
-  .items-end {
-    align-items: flex-end;
-  }
   .justify-end {
     justify-content: flex-end;
   }
