@@ -29,6 +29,7 @@
     --color-primary-500: #bf00ff;
     --color-secondary-500: #00ffbf;
     --color-secondary-700: #00ad82;
+    --color-accent-500: #c5417b;
     --color-tinted-neutral-50: #f5f4f6;
     --color-tinted-neutral-100: #e3e2e5;
     --color-tinted-neutral-200: #cac9cd;
@@ -209,6 +210,24 @@
   .z-10 {
     z-index: 10;
   }
+  .m-60 {
+    margin: calc(var(--spacing) * 60);
+  }
+  .mr-60 {
+    margin-right: calc(var(--spacing) * 60);
+  }
+  .mr-80 {
+    margin-right: calc(var(--spacing) * 80);
+  }
+  .ml-60 {
+    margin-left: calc(var(--spacing) * 60);
+  }
+  .ml-80 {
+    margin-left: calc(var(--spacing) * 80);
+  }
+  .ml-100 {
+    margin-left: calc(var(--spacing) * 100);
+  }
   .flex-center {
     display: flex;
     align-items: center;
@@ -332,8 +351,14 @@
   .flex-col {
     flex-direction: column;
   }
+  .items-center {
+    align-items: center;
+  }
   .justify-end {
     justify-content: flex-end;
+  }
+  .justify-start {
+    justify-content: flex-start;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -346,6 +371,9 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
   }
   .gap-40 {
     gap: calc(var(--spacing) * 40);
@@ -377,6 +405,9 @@
   }
   .bg-\[url\] {
     background-color: url;
+  }
+  .bg-accent-500 {
+    background-color: var(--color-accent-500);
   }
   .bg-amber-400 {
     background-color: var(--color-amber-400);
@@ -452,6 +483,15 @@
   }
   .object-top {
     object-position: top;
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-24 {
+    padding-inline: calc(var(--spacing) * 24);
+  }
+  .px-40 {
+    padding-inline: calc(var(--spacing) * 40);
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
