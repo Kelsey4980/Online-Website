@@ -12,12 +12,11 @@
     </head>
     <body>
         <!--TODO: Change sizes -->
-        <!--TODO: Fix contact link-->
         <div class="header-default">
             <a href="" class="header-item">HOME</a>
             <a href="works.html" class="header-item">WORKS</a>
             <a href="research.html" class="header-item">RESEARCH</a>
-            <a href="" class="header-item">CONTACT</a>
+            <a href="" class="header-item" id="contact">CONTACT</a>
         </div>
         <!--TODO: Make hero section -->
         <div class="h-[calc(100vh-160px)] w-full"></div>
@@ -69,5 +68,17 @@
                 © KELSEY, GM - I do stuff sometimes.
             </p>
         </div>
+        <script>
+            document
+                .getElementById("contact")
+                .addEventListener("click", function (event) {
+                    event.preventDefault(); // prevent default anchor behavior
+
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: "smooth",
+                    });
+                });
+        </script>
     </body>
 </html>

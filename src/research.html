@@ -19,7 +19,7 @@
                 <a href="index.html" class="header-item">HOME</a>
                 <a href="works.html" class="header-item">WORKS</a>
                 <a href="" class="header-item">RESEARCH</a>
-                <a href="" class="header-item">CONTACT</a>
+                <a href="" class="header-item" id="contact">CONTACT</a>
             </div>
             <!--TODO: Add title section -->
             <div class="flex flex-col">
@@ -96,5 +96,17 @@
                 </p>
             </div>
         </div>
+        <script>
+            document
+                .getElementById("contact")
+                .addEventListener("click", function (event) {
+                    event.preventDefault(); // prevent default anchor behavior
+
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: "smooth",
+                    });
+                });
+        </script>
     </body>
 </html>
