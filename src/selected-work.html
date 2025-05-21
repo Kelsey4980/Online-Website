@@ -50,7 +50,7 @@
                     class="projects-end flex h-20 w-full justify-end pr-10 pb-5"
                 >
                     <div class="flex-center size-auto gap-5">
-                        <a href="https://github.com/Kelsey4980"
+                        <a href="" id="githublink"
                             ><i
                                 class="fa-brands fa-github footer-icon text-tinted-neutral-50 hover:text-secondary-500 transition duration-300 ease-in-out hover:text-4xl"
                             ></i
@@ -58,7 +58,11 @@
                         <div
                             class="border-tinted-neutral-50 h-[40px] w-2 border-r border-solid"
                         ></div>
-                        <a class="group flex-center size-auto gap-3" href="">
+                        <a
+                            class="group flex-center size-auto gap-3"
+                            href=""
+                            id="link"
+                        >
                             <p
                                 class="text-tinted-neutral-50 group-hover:text-secondary-500 text-2xl font-semibold transition duration-300 ease-in-out"
                             >
@@ -166,6 +170,8 @@
             );
             const img = document.getElementById("project-img");
             const headerimg = document.getElementById("header-img");
+            const link = document.getElementById("link");
+            const githublink = document.getElementById("githublink");
 
             // Example data mapping
             const content = {
@@ -221,6 +227,8 @@
                 specs.textContent = content[project].specs;
                 contributions.textContent = content[project].contributions;
                 img.src = content[project].img;
+                link.href = content[project].link;
+                githublink.href = content[project].githublink;
                 headerimg.style.backgroundImage = `url("${content[project].img}")`;
                 headerimg.classList.add(
                     "pointer-events-none",
