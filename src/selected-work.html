@@ -30,14 +30,18 @@
             <div class="flex-center h-full flex-col gap-5">
                 <h1
                     class="text-tinted-neutral-50 size-auto text-[4rem] font-semibold"
+                    id="project-title"
                 >
                     Project
                 </h1>
-                <h4 class="text-tinted-neutral-50 size-auto text-4xl">
+                <h4
+                    class="text-tinted-neutral-50 size-auto text-4xl"
+                    id="project-desc"
+                >
                     Short Description
                 </h4>
             </div>
-            <div class="flex h-20 w-full items-end justify-end pr-10 pb-5">
+            <div class="projects-end flex h-20 w-full justify-end pr-10 pb-5">
                 <div class="flex-center size-auto gap-5">
                     <a href="https://github.com/Kelsey4980"
                         ><i
@@ -65,7 +69,10 @@
                 <h6 class="text-secondary-500 text-2xl font-semibold italic">
                     SPECIFICATIONS
                 </h6>
-                <p class="text-tinted-neutral-50 text-justify text-[1.25rem]">
+                <p
+                    class="text-tinted-neutral-50 text-justify text-[1.25rem]"
+                    id="project-specs"
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -85,6 +92,7 @@
                     </h6>
                     <p
                         class="text-tinted-neutral-50 text-justify text-[1.25rem]"
+                        id="project-contributions"
                     >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
@@ -126,5 +134,58 @@
                 © KELSEY, GM - I do stuff sometimes.
             </p>
         </div>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const project = params.get("project");
+
+            const title = document.getElementById("project-title");
+            const description = document.getElementById("project-desc");
+            const specs = document.getElementById("project-specs");
+            const contributions = document.getElementById(
+                "project-contributions",
+            );
+
+            // Example data mapping
+            const content = {
+                Connectify: {
+                    title: "Connectify",
+                    description: "Next-Generation Social Media Platform",
+                    specs: "Connectify is a newly developed online space for users to freely interact online through posts and replies. It also serves as a platform for updates and entertainment.",
+                    contributions: "<contributions>",
+                },
+                VoltVault: {
+                    title: "Volt Vault",
+                    description: "Electric Meter Database Management",
+                    specs: "Volt Vault is database management system to keep track of rigorous operations conducted in the administration and maintenance of electric meters.",
+                    contributions: "<contributions>",
+                },
+                NoirHRS: {
+                    title: "Noir HRS",
+                    description: "Hotel Reservation System",
+                    specs: "Noir HRS is a system designed to manage hotel operations. It is a software that oversees the transactions and reservations made in a way that is easy and convenient to use.",
+                    contributions: "<contributions>",
+                },
+                LanguageTool: {
+                    title: "Language Tool",
+                    description: "Grammar Assistant",
+                    specs: "Language Tool is a collaborative project application designed to check and proofread content in a selected language. It highlights grammar and syntax errors and provides insightful corrections.",
+                    contributions: "<contributions>",
+                },
+            };
+
+            if (project && content[project]) {
+                title.textContent = content[project].title;
+                description.textContent = content[project].description;
+                specs.textContent = content[project].specs;
+                contributions.textContent = content[project].contributions;
+                console.log("in");
+            } else {
+                title.textContent = "Project Not Found";
+                description.textContent =
+                    "Please go back and select a valid project.";
+                specs.textContent = " ";
+                contributions.textContent = " ";
+            }
+        </script>
     </body>
 </html>
